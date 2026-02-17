@@ -233,6 +233,9 @@ span{
     padding-inline: 32px;
     }
 }
+@media (max-width: 540px){
+    
+}
 
 
 footer{
