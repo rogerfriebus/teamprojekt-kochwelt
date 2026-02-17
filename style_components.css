@@ -117,8 +117,8 @@ a {
   justify-content: space-between;
   gap: 24px;
   padding-top: 16px;
-  padding-bottom: 10px;
-  /* unten weniger Luft -> näher an Trennlinie */
+  padding-bottom: 0;
+  /* kein Bottom-Padding: Nav-Links reichen bis zur border-bottom */
   flex-wrap: wrap;
 }
 
@@ -128,6 +128,8 @@ a {
   align-items: center;
   gap: 10px;
   flex: 0 0 auto;
+  margin-bottom: 10px;
+  /* Logo etwas Abstand zur Linie, da header-inner kein padding-bottom hat */
 }
 
 .logo img {
@@ -164,8 +166,8 @@ a {
   left: 0;
   right: 0;
 
-  bottom: -1px;
-  /* <<< berührt die border-bottom */
+  bottom: 0;
+  /* bündig am unteren Rand des nav a = direkt auf der grauen border */
   height: 3px;
 
   background: var(--green);
@@ -250,28 +252,30 @@ a {
 }
 
 .social-icon {
-  width: 34px;
-  height: 34px;
-  border-radius: 999px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
 
-  background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.18);
-
-  color: #fff;
-  font-weight: 800;
-  font-size: 12px;
-  letter-spacing: 0.4px;
-  text-transform: uppercase;
+  /* Kein runder Hintergrund mehr */
+  background: none;
+  border: none;
 
   cursor: pointer;
-  transition: transform 100ms ease;
+  transition: opacity 150ms ease;
 }
 
 .social-icon:hover {
-  transform: translateY(-1px);
+  opacity: 0.75;
+}
+
+/* Icons einheitlich 24px hoch, Original-Brandfarben */
+.social-icon img {
+  height: 24px;
+  width: auto;
+  display: block;
+  /* Kein Filter: SVGs enthalten Kreis-Hintergrund als Teil der Grafik.
+     brightness(0) invert(1) würde alles zu weißen Kreisen machen.
+     Bei Bedarf SVGs ohne Kreis-Hintergrund verwenden, dann Filter aktivieren. */
 }
 
 /* ============================
@@ -280,10 +284,6 @@ a {
 @media (max-width: 900px) {
   .nav {
     gap: 16px;
-  }
-
-  .nav a::after {
-    bottom: -1px;
   }
 
   .footer-inner {
