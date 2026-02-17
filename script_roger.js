@@ -193,8 +193,7 @@ function initContactForm() {
     const formData = new FormData(form);
 
     try {
-      // ⚠️ TODO: Ersetze "DEINE_ID" durch deine echte Formspree-Form-ID
-      const res = await fetch("https://formspree.io/f/DEINE_ID", {
+      const res = await fetch("https://formspree.io/f/xreakveq", {
         method: "POST",
         body: formData,
         headers: { Accept: "application/json" },
