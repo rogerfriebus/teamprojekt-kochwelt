@@ -73,6 +73,7 @@ main{
     gap: 16px;
 }
 .border-radius{
+    width: 50%;
     border-color: #EFEFEF;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
@@ -263,6 +264,12 @@ span{
     .profil-order{
         flex-direction: column;
         gap: 32px;
+    }
+    .button{
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
 
