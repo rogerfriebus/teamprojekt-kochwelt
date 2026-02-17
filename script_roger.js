@@ -108,17 +108,80 @@ function setActiveNav() {
 }
 
 /* ============================
-   3) Boot / Startlogik
+   3) Hamburger-Menü (Mobile Navigation)
+   ============================ */
+
+/**
+ * Initialisiert das Hamburger-Menü:
+ * - Klick auf Burger-Button: Nav auf/zu
+ * - Klick auf Overlay: Nav schließen
+ * - Klick auf Nav-Link: Nav schließen
+ * - Escape-Taste: Nav schließen
+ *
+ * Voraussetzung: header.html muss bereits geladen sein (nach includeFragments).
+ */
+function initBurgerMenu() {
+  const burgerBtn = document.querySelector(".burger-btn");
+  const nav = document.querySelector(".nav");
+  const overlay = document.querySelector(".nav-overlay");
+
+  // Falls kein Burger-Button gefunden → nichts tun (z.B. falls HTML fehlt)
+  if (!burgerBtn || !nav) return;
+
+  /**
+   * Menü öffnen oder schließen
+   * @param {boolean} open – true = öffnen, false = schließen
+   */
+  function toggleMenu(open) {
+    burgerBtn.classList.toggle("open", open);
+    nav.classList.toggle("open", open);
+    if (overlay) overlay.classList.toggle("open", open);
+    document.body.classList.toggle("nav-open", open);
+
+    // Accessibility: aria-expanded für Screenreader
+    burgerBtn.setAttribute("aria-expanded", String(open));
+    burgerBtn.setAttribute("aria-label", open ? "Menü schließen" : "Menü öffnen");
+  }
+
+  // Burger-Button: Toggle
+  burgerBtn.addEventListener("click", () => {
+    const isOpen = nav.classList.contains("open");
+    toggleMenu(!isOpen);
+  });
+
+  // Overlay: Klick schließt das Menü
+  if (overlay) {
+    overlay.addEventListener("click", () => toggleMenu(false));
+  }
+
+  // Nav-Links: Klick schließt das Menü
+  nav.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => toggleMenu(false));
+  });
+
+  // Escape-Taste: Menü schließen
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && nav.classList.contains("open")) {
+      toggleMenu(false);
+      burgerBtn.focus(); // Fokus zurück auf Button
+    }
+  });
+}
+
+/* ============================
+   4) Boot / Startlogik
    ============================ */
 
 /**
  * Startpunkt:
  * - Erst die Komponenten laden
  * - Dann die Navigation aktiv setzen
+ * - Dann Burger-Menü initialisieren
  */
 async function boot() {
   await includeFragments();
   setActiveNav();
+  initBurgerMenu();
 }
 
 // Sofort starten, sobald dieses Script geladen ist

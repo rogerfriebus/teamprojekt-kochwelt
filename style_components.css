@@ -187,6 +187,166 @@ a {
 }
 
 /* ============================
+   5b) Burger-Button + Mobile Navigation
+   ============================ */
+
+/* Burger-Button: auf Desktop versteckt */
+.burger-btn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  margin-bottom: 8px;
+  z-index: 1100;
+  position: relative;
+}
+
+/* Drei Striche des Burger-Icons */
+.burger-btn span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: transform 300ms ease, opacity 200ms ease;
+}
+
+.burger-btn span + span {
+  margin-top: 6px;
+}
+
+/* X-Animation: mittlerer Strich ausblenden, oben/unten rotieren */
+.burger-btn.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.burger-btn.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-btn.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Overlay: unsichtbar auf Desktop */
+.nav-overlay {
+  display: none;
+}
+
+/* ============================
+   5c) Mobile Breakpoint (max 768px)
+   ============================ */
+@media (max-width: 768px) {
+
+  /* Header-Inner: Items vertikal zentrieren, kein wrap */
+  .header-inner {
+    align-items: center;
+    flex-wrap: nowrap;
+    padding-bottom: 0;
+    padding-top: 12px;
+    min-height: 56px;
+  }
+
+  /* Logo: margin-bottom zurücksetzen für vertikale Zentrierung */
+  .logo {
+    margin-bottom: 0;
+    padding: 8px 0;
+  }
+
+  /* Burger-Button sichtbar */
+  .burger-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-bottom: 0;
+  }
+
+  /* Overlay: dunkler Hintergrund hinter dem Menü */
+  .nav-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 300ms ease, visibility 300ms ease;
+  }
+
+  .nav-overlay.open {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Nav: Off-Canvas-Menü von rechts */
+  .nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 280px;
+    max-width: 85vw;
+    background: #ffffff;
+    box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
+    z-index: 1050;
+
+    /* Slide-in / Slide-out */
+    transform: translateX(100%);
+    transition: transform 300ms ease-in-out;
+
+    /* Vertikale Anordnung der Links */
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    gap: 0;
+    padding: 72px 0 24px;
+    overflow-y: auto;
+  }
+
+  .nav.open {
+    transform: translateX(0);
+  }
+
+  /* Nav-Links: groß + touch-freundlich */
+  .nav a {
+    display: flex;
+    align-items: center;
+    padding: 14px 28px;
+    min-height: 48px;
+    font-size: 16px;
+    font-weight: 600;
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* Erster Link: oberer Rand */
+  .nav a:first-child {
+    border-top: 1px solid var(--border);
+  }
+
+  /* Aktiver Link: grüner linker Rand statt Unterstrich */
+  .nav a::after {
+    display: none;
+  }
+
+  .nav a.active {
+    color: var(--green);
+    background: rgba(10, 143, 42, 0.06);
+    border-left: 3px solid var(--green);
+  }
+
+  /* Kein horizontaler Scroll wenn Menü offen */
+  body.nav-open {
+    overflow: hidden;
+  }
+}
+
+/* ============================
    6) Footer (klein + Mockup-nah)
    ============================ */
 .site-footer {
@@ -281,11 +441,13 @@ a {
 /* ============================
    7) Responsive (Component-Styles)
    ============================ */
-@media (max-width: 900px) {
+@media (min-width: 769px) and (max-width: 900px) {
   .nav {
     gap: 16px;
   }
+}
 
+@media (max-width: 900px) {
   .footer-inner {
     justify-content: center;
   }
@@ -294,10 +456,6 @@ a {
 @media (max-width: 420px) {
   .container {
     padding: 0 16px;
-  }
-
-  .nav {
-    gap: 12px;
   }
 
   .footer-brand {
