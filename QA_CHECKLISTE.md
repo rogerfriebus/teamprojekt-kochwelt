@@ -11,17 +11,19 @@
 
 | Kategorie | PASS | WARN | FAIL | Gesamt |
 |-----------|------|------|------|--------|
-| A – Projektbasics | 4 | 1 | 2 | 7 |
+| A – Projektbasics | 4 | 2 | 1 | 7 |
 | B – Design & UX | 4 | 1 | 1 | 6 |
 | C – Responsiveness | 5 | 1 | 0 | 6 |
 | D – Funktionalität | 4 | 1 | 0 | 5 |
 | E – Legal & Compliance | 4 | 1 | 0 | 5 |
 | F – Technische Qualität | 3 | 2 | 2 | 7 |
-| **Gesamt** | **24** | **7** | **5** | **36** |
+| **Gesamt** | **24** | **8** | **4** | **36** |
 
 > **Änderungsprotokoll:**
 > - 17.02.2026 (Update 1): `rezept_roger.html` + `script_portionen.js` erstellt. D5 Portionsrechner von FAIL → PASS (Roger) / WARN (Bjoern). A7 hinzugefügt (fehlendes Rezeptbild).
 > - 17.02.2026 (Update 2): `carbonara.jpg` + `profile_roger.jpeg` vorhanden → A7 PASS. Bildnachweis (Unsplash/Rob Wicks) in `impressum.html` eingetragen. Portionsrechner: Startwert 4, Negativwerte-Schutz, initiale Berechnung.
+> - 17.02.2026 (Update 3): `croissant.html` erstellt (Französische Croissants, 8 Stück, mit Portionsrechner). A2 Blocker behoben → WARNING.
+> - 17.02.2026 (Update 4): Portionsrechner begrenzt auf max. 12 (HTML `max="12"` + JS-Validierung). Kreisrundes Profilbild via `object-fit: cover` in style_roger.css.
 
 ---
 
@@ -49,15 +51,15 @@ Komponenten-Architektur (header.html, footer.html per `data-include`) ist sinnvo
 ---
 
 ### A2 – Verlinkte Seiten erreichbar (keine toten Links)
-**Status:** ❌ FAIL | **Schwere:** Blocker
+**Status:** ⚠️ WARNING | **Schwere:** Minor (Blocker behoben)
 
-| Link | Datei | Zeile | Problem |
-|------|-------|-------|---------|
-| `./croissant.html` | index.html | 38 | **Datei existiert nicht** |
-| `#` (3×) | index.html | 45–47 | Platzhalter-Links (recipes-links) |
-| `#` (3×) | footer.html | 13, 16, 19 | Social-Media-Links ohne echte URLs |
+| Link | Datei | Zeile | Status |
+|------|-------|-------|--------|
+| `./croissant.html` | index.html | 38 | ✅ **Behoben** – Seite erstellt |
+| `#` (3×) | index.html | 45–47 | ⚠️ Platzhalter-Links (recipes-links) – sollten auf Rezeptseiten verlinken |
+| `#` (3×) | footer.html | 13, 16, 19 | ⚠️ Social-Media-Links ohne echte URLs |
 
-**Fix:** `croissant.html` erstellen oder Link auf existierende Rezeptseite ändern. Platzhalter-Links (#) durch echte URLs ersetzen oder entfernen.
+**Offen:** Platzhalter-Links (#) durch echte URLs ersetzen.
 
 ---
 
@@ -543,7 +545,7 @@ Zusätzlich werden `h1`, `h2`, `h3`, `p`, `span` global überschrieben, was ande
 
 ### 🔴 Blocker (vor Abgabe fixen)
 
-1. **Broken Link** `./croissant.html` in index.html → Seite erstellen oder Link ändern
+1. ~~**Broken Link** `./croissant.html`~~ ✅ erledigt – Rezeptseite erstellt
 2. **Lorem Ipsum** in Wok-Sektion auf Startseite → echten Text einsetzen
 
 ### 🟠 Major (sollte gefixt werden)
@@ -577,7 +579,8 @@ Zusätzlich werden `h1`, `h2`, `h3`, `p`, `span` global überschrieben, was ande
 | script_roger.js | Roger | Shared JS | ✅ Produktiv |
 | **script_portionen.js** | **Roger** | **Shared JS** | **✅ NEU – Portionsrechner** |
 | **rezept_roger.html** | **Roger** | **Rezeptseite** | **✅ NEU – Spaghetti Carbonara** |
-| index.html | Waldemar | Startseite | ⚠️ Broken Link + Lorem |
+| **croissant.html** | **Roger** | **Rezeptseite** | **✅ NEU – Französische Croissants** |
+| index.html | Waldemar | Startseite | ⚠️ Lorem + Platzhalter-Links |
 | style.css | Waldemar | Startseite CSS | ⚠️ Duplizierte Regeln |
 | rezept-des-tages.html | Bjoern | Rezeptseite | ✅ Produktiv (Portionsrechner offen) |
 | rezept-des-tages.css | Bjoern | Rezept CSS | ⚠️ Globale Overrides |

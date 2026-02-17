@@ -228,7 +228,17 @@ h1 {
 }
 
 /* ============================
-   6) Responsive (Kontakt + Bestätigung)
+   6) Profilbild kreisrund (auch bei nicht-quadratischen Bildern)
+   ============================ */
+.profil-img-size {
+  width: 124px;
+  height: 124px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ============================
+   7) Responsive (Kontakt + Bestätigung)
    ============================ */
 @media (max-width: 480px) {
   .contact-box {

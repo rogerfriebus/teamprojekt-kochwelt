@@ -55,6 +55,13 @@ function initPortionenRechner() {
       input.value = 1;
     }
 
+    // Maximum aus dem HTML-Attribut lesen (falls gesetzt)
+    var maxWert = parseFloat(input.max) || 99;
+    if (rohwert > maxWert) {
+      rohwert = maxWert;
+      input.value = maxWert;
+    }
+
     // Nur ganzzahlige Portionen (keine 2.5 Portionen)
     var portionen = Math.round(rohwert);
     if (portionen !== rohwert) {
