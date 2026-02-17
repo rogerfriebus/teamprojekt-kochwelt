@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rezept des Tages</title>
+
+    <link rel="icon" type="image/png" href="./img/favicon-light.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./img/favicon-dark.png"
+      media="(prefers-color-scheme: dark)"
+    />
+
+    <link rel="stylesheet" href="./style_components.css" />
+    <link rel="stylesheet" href="./style_roger.css" />
+    <script src="./script_roger.js" defer></script>
+    <link rel="stylesheet" href="./recipe-croissant.css">
+  </head>
+
+  <body>
+    <header
+      class="site-header"
+      data-include="./components/header.html"
+    ></header>
+
+    <main>
+        <section class="recipe-title-card">
+            <div class="title-card-position max-width">
+                <h1>Französische Croissants</h1>
+                <img class="recipe-title-img" src="./img/frische-croissants.png" alt="Ein Bild von frischen Croissants mit Kaffee, Butter und Marmelade">
+                <section class="recipe-info">
+                    <div class="info-box">
+                        <img class="info-icon" src="./img/icons/clock-regular.svg" alt="">
+                        <p>12 Std.</p>
+                    </div>
+                    <div class="info-box">
+                        <img class="info-icon" src="./img/icons/brain-solid.svg" alt="">
+                        <p>Mittel-Schwer</p>
+                    </div>
+                    <div class="info-box">
+                        <img class="info-icon" src="./img/icons/calendar-alt-regular.svg" alt="">
+                        <p>17.02.2026</p>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <section class="recipe-details">
+            <div class="separator"></div>
+            <article class="recipe-list max-width">
+                <section class="input-portions">
+                    <p>Zutaten für</p>
+                    <div class="portion-size">
+                        <input class="border-radius" type="number" name="personen" min="1" value="12" id="personen">
+                        <div class="button">
+                            <p>Portionen</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="ingredients">
+                    <div class="container-box-gray">
+                        <p>500g Weizenmehl (Typ 405 oder 550)</p>
+                    </div>
+                    <div class="container-box-white">
+                        <p>60g Zucker</p>
+                    </div>
+                    <div class="container-box-gray">
+                        <p>10g Salz</p>
+                    </div>
+                    <div class="container-box-white">
+                        <p>10g Trockenhefe (oder 20g frische Hefe)</p>
+                    </div>
+                    <div class="container-box-gray">
+                        <p>140ml Milch (kalt)</p>
+                    </div>
+                    <div class="container-box-white">
+                        <p>40g Butter (weich, für den Teig)</p>
+                    </div>
+                    <div class="container-box-gray">
+                        <p>250g Butter (kalt, zum Einarbeiten/Tourieren)</p>
+                    </div>
+                    <div class="container-box-white">
+                        <p>1 Eigelb (zum Bestreichen)</p>
+                    </div>
+                    <div class="container-box-gray">
+                        <p>1 Prise Liebe ❤️</p>  
+                    </div>
+                </section>
+            </article>
+        </section>
+        <section class="recipe-preparation">
+            <section class="preparation-details max-width">
+                <h2>Zubereitung</h2>
+                <section class="preperation-info">
+                    <div class="info-box">
+                        <img class="info-icon" src="./img/icons/clock-regular.svg" alt="">
+                        <p>ca. 45 Min.</p>
+                    </div>
+                    <div class="info-box">
+                        <img class="info-icon" src="./img/icons/clock-regular.svg" alt="">
+                        <p>Gesamtzeit ca. 12 Std.</p>
+                    </div>
+                </section>
+                <div class="preparation-steps">
+                    <ol>
+                        <li>
+                            <p><span class="highlight">Teig herstellen:</span> Mehl, Zucker, Salz, Hefe, Milch, Wasser und die 40g weiche Butter zu einem glatten Teig verkneten. Den Teig flach drücken und für mindestens 2 Stunden (am besten über Nacht) in den Kühlschrank stellen.</p>
+                        </li>
+                        <li>
+                            <p><span class="highlight">Butterplatte:</span> Die 250g kalte Butter zwischen Backpapier zu einem Quadrat (ca. 20x20 cm) flach rollen und ebenfalls kühlen.</p>
+                        </li>
+                        <li>
+                            <p><span class="highlight">Tourieren (Das Geheimnis der Schichten):</span> Den Teig doppelt so groß wie die Butterplatte ausrollen. Die Butterplatte in die Mitte legen, den Teig darüber schlagen und versiegeln. Den Teig vorsichtig lang ausrollen, wie einen Brief zusammenfalten und 30 Min. kühlen. Diesen Vorgang insgesamt dreimal wiederholen.</p>
+                        </li>
+                        <li>
+                            <p><span class="highlight">Formen:</span> Den Teig am Ende ca. 4mm dick ausrollen und in lange, schmale Dreiecke schneiden. Von der breiten Seite her locker zu Croissants aufrollen.</p>
+                        </li>
+                        <li>
+                            <p><span class="highlight">Backen</span> Die Croissants auf dem Blech nochmals 1-2 Stunden gehen lassen, bis sie deutlich größer sind. Mit Eigelb bestreichen und im vorgeheizten Ofen bei 180°C (Umluft) ca. 15-20 Minuten goldbraun backen.</p>
+                        </li>
+                    </ol>
+                </section>
+        </section>
+        <section  class="profil">
+            <section class="profil-details max-width">
+                <h3>Rezept erstellt von</h3>
+                <div class="profil-order">
+                    <img class="profil-img-size" src="./img/389904-B_02.jpg" alt="">
+                    <p>Waldemar Chorow</p>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer
+      class="site-footer"
+      data-include="./components/footer.html"
+    ></footer>
+  </body>
+</html>
