@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rezept des Tages</title>
+
+    <link rel="icon" type="image/png" href="./img/favicon-light.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./img/favicon-dark.png"
+      media="(prefers-color-scheme: dark)"
+    />
+
+    <link rel="stylesheet" href="./style_components.css" />
+    <link rel="stylesheet" href="./style_roger.css" />
+    <script src="./script_roger.js" defer></script>
+    <link rel="stylesheet" href="./rezept-des-tages.css">
+  </head>
+
+  <body>
+    <header
+      class="site-header"
+      data-include="./components/header.html"
+    ></header>
+
+    <main>
+        <section class="recipe-title-card">
+            <div class="title-card-position max-width">
+                <h1>Griechischer Bauernsalat</h1>
+                <img class="recipe-title-img" src="./img/salad.jpg" alt="the image depicts a plate of salat recorded up close">
+                <section class="recipe-info">
+                    <div class="info-box">
+                        <img class="info-icon" src="./img/icons/clock-regular.svg" alt="">
+                        <p>15 Min.</p>
+                    </div>
+                    <div class="info-box">
+                        <img class="info-icon" src="./img/icons/brain-solid.svg" alt="">
+                        <p>Simple</p>
+                    </div>
+                    <div class="info-box">
+                        <img class="info-icon" src="./img/icons/calendar-alt-regular.svg" alt="">
+                        <p>16.02.2026</p>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <section class="recipe-details">
+            <div class="separator"></div>
+            <article class="recipe-list max-width">
+                <section class="input-portions">
+                    <p>Zutaten für</p>
+                    <div class="portion-size">
+                        <input class="border-radius" type="number" name="personen" min="1" value="1" id="personen">
+                        <div class="button">
+                            <p>Portionen</p>
+                        </div>
+                    </div>
+                </section>
+                <section class="ingredients">
+                    <div class="container-box-gray">
+                        <p>1 Salatgurke(n)</p>
+                    </div>
+                    <div class="container-box-white">
+                        <p>2 Paprikaschote(n), grün und rot</p>
+                    </div>
+                    <div class="container-box-gray">
+                        <p>500g Tomaten</p>
+                    </div>
+                    <div class="container-box-white">
+                        <p>2 Zwiebel(n)</p>
+                    </div>
+                    <div class="container-box-gray">
+                        <p>200g Schafskäse</p>
+                    </div>
+                    <div class="container-box-white">
+                        <p>100g Oliven, schwarz</p>
+                    </div>
+                    <div class="container-box-gray">
+                        <p>1 Zitrone(n)</p>
+                    </div>
+                    <div class="container-box-white">
+                        <p>125ml Olivenöl</p>
+                    </div>
+                    <div class="container-box-gray">
+                        <p>Oregano</p>  
+                    </div>
+                    <div class="container-box-white">
+                        <p>Salz und Pfeffer</p> 
+                    </div>
+                </section>
+            </article>
+        </section>
+        <section class="recipe-preparation">
+            <section class="preparation-details max-width">
+                <h2>Zubereitung</h2>
+                <section class="preperation-info">
+                    <div class="info-box">
+                        <img class="info-icon" src="./img/icons/clock-regular.svg" alt="">
+                        <p>ca. 15Min.</p>
+                    </div>
+                    <div class="info-box">
+                        <img class="info-icon" src="./img/icons/clock-regular.svg" alt="">
+                        <p>Gesamtzeit ca. 15Min.</p>
+                    </div>
+                </section>
+                <span>Gurke waschen und ungeschält in dünne Scheiben schneiden. Paprika waschen. entkernen und in dünne Streifen schneiden. Tomaten waschen und achteln. Zwiebeln schälen und in feine Ringe schneiden. Schafskäse würfeln und mit Oregano bestreuen. Oliven abgießen und mit Gurken, Paprike, Tomaten, Zwiebeln und Schafskäse in eine Schüssel geben.Olivenöl. Zitronensaft, Salz und Pfeffer zu einer Sauce verrühren und über den Salat gießen. Umrühren. </span>
+            </section>
+        </section>
+        <section  class="profil">
+            <section class="profil-details max-width">
+                <h3>Rezept erstellt von</h3>
+                <div class="profil-order">
+                    <img class="profil-img-size" src="./img/profile.png" alt="">
+                    <p>Julius</p>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <footer
+      class="site-footer"
+      data-include="./components/footer.html"
+    ></footer>
+  </body>
+</html>
