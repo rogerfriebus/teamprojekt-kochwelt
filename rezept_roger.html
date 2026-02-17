@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spaghetti Carbonara – Kochwelt</title>
+
+    <link rel="icon" type="image/png" href="./img/favicon-light.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./img/favicon-dark.png"
+      media="(prefers-color-scheme: dark)"
+    />
+
+    <link rel="stylesheet" href="./style_components.css" />
+    <link rel="stylesheet" href="./style_roger.css" />
+    <link rel="stylesheet" href="./rezept-des-tages.css" />
+    <script src="./script_roger.js" defer></script>
+    <script src="./script_portionen.js" defer></script>
+  </head>
+
+  <body>
+    <header
+      class="site-header"
+      data-include="./components/header.html"
+    ></header>
+
+    <main>
+      <section class="recipe-title-card">
+        <div class="title-card-position max-width">
+          <h1>Spaghetti Carbonara</h1>
+          <img
+            class="recipe-title-img"
+            src="./img/carbonara.jpg"
+            alt="Teller mit Spaghetti Carbonara, garniert mit Pecorino und schwarzem Pfeffer"
+          />
+          <section class="recipe-info">
+            <div class="info-box">
+              <img
+                class="info-icon"
+                src="./img/icons/clock-regular.svg"
+                alt=""
+              />
+              <p>25 Min.</p>
+            </div>
+            <div class="info-box">
+              <img
+                class="info-icon"
+                src="./img/icons/brain-solid.svg"
+                alt=""
+              />
+              <p>Simple</p>
+            </div>
+            <div class="info-box">
+              <img
+                class="info-icon"
+                src="./img/icons/calendar-alt-regular.svg"
+                alt=""
+              />
+              <p>17.02.2026</p>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section class="recipe-details">
+        <div class="separator"></div>
+        <article class="recipe-list max-width">
+          <section class="input-portions">
+            <p>Zutaten für</p>
+            <div class="portion-size">
+              <input
+                class="border-radius"
+                type="number"
+                name="personen"
+                min="1"
+                value="4"
+                id="personen"
+              />
+              <div class="button">
+                <p>Portionen</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="ingredients">
+            <div class="container-box-gray">
+              <p data-amount="100" data-unit="g" data-label="Spaghetti">
+                400g Spaghetti
+              </p>
+            </div>
+            <div class="container-box-white">
+              <p data-amount="75" data-unit="g" data-label="Guanciale (oder Pancetta)">
+                300g Guanciale (oder Pancetta)
+              </p>
+            </div>
+            <div class="container-box-gray">
+              <p data-amount="1" data-unit="" data-label="Eigelb">
+                4 Eigelb
+              </p>
+            </div>
+            <div class="container-box-white">
+              <p data-amount="1" data-unit="" data-label="Ei (ganz)">
+                4 Ei (ganz)
+              </p>
+            </div>
+            <div class="container-box-gray">
+              <p data-amount="30" data-unit="g" data-label="Pecorino Romano, gerieben">
+                120g Pecorino Romano, gerieben
+              </p>
+            </div>
+            <div class="container-box-white">
+              <p data-amount="15" data-unit="g" data-label="Parmesan, gerieben">
+                60g Parmesan, gerieben
+              </p>
+            </div>
+            <div class="container-box-gray">
+              <p>Salz</p>
+            </div>
+            <div class="container-box-white">
+              <p>Schwarzer Pfeffer, frisch gemahlen</p>
+            </div>
+          </section>
+        </article>
+      </section>
+
+      <section class="recipe-preparation">
+        <section class="preparation-details max-width">
+          <h2>Zubereitung</h2>
+          <section class="preperation-info">
+            <div class="info-box">
+              <img
+                class="info-icon"
+                src="./img/icons/clock-regular.svg"
+                alt=""
+              />
+              <p>Zubereitungszeit ca. 20 Min.</p>
+            </div>
+            <div class="info-box">
+              <img
+                class="info-icon"
+                src="./img/icons/clock-regular.svg"
+                alt=""
+              />
+              <p>Gesamtzeit ca. 25 Min.</p>
+            </div>
+          </section>
+          <span>
+            Spaghetti in reichlich Salzwasser al dente kochen. Guanciale in
+            Streifen schneiden und in einer Pfanne ohne Öl bei mittlerer Hitze
+            knusprig braten. Eigelb und ganzes Ei in einer Schüssel verquirlen,
+            Pecorino und Parmesan unterrühren und mit reichlich frisch
+            gemahlenem Pfeffer würzen. Spaghetti abgießen und dabei eine
+            kleine Tasse Kochwasser auffangen. Die Pasta direkt zum Guanciale
+            in die Pfanne geben und die Pfanne vom Herd nehmen.
+            Die Ei-Käse-Mischung zügig unterrühren – die Restwärme gart das
+            Ei cremig, ohne es stocken zu lassen. Bei Bedarf löffelweise
+            Kochwasser zugeben, bis eine sämige Sauce entsteht. Sofort
+            servieren, mit extra Pecorino und Pfeffer bestreuen.
+          </span>
+        </section>
+      </section>
+
+      <section class="profil">
+        <section class="profil-details max-width">
+          <h3>Rezept erstellt von</h3>
+          <div class="profil-order">
+            <img
+              class="profil-img-size"
+              src="./img/profile_roger.jpeg"
+              alt="Profilbild von Roger"
+            />
+            <p>Roger</p>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer
+      class="site-footer"
+      data-include="./components/footer.html"
+    ></footer>
+  </body>
+</html>
