@@ -214,6 +214,12 @@ span{
     max-width: 1440px;
 }
 
+@media (max-width: 1440px){
+    .title-card-position{
+    width: 100%;
+    padding-inline: 32px;
+    }
+}
 
 
 footer{
