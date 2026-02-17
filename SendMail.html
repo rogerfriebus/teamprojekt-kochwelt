@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nachricht gesendet</title>
+
+    <link rel="icon" type="image/png" href="./img/favicon-light.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./img/favicon-dark.png"
+      media="(prefers-color-scheme: dark)"
+    />
+
+    <link rel="stylesheet" href="./style_components.css" />
+    <link rel="stylesheet" href="./style_roger.css" />
+    <script src="./script_roger.js" defer></script>
+  </head>
+
+  <body>
+    <header
+      class="site-header"
+      data-include="./components/header.html"
+    ></header>
+
+    <main class="confirm-page">
+      <div class="confirm-box">
+        <!-- Grünes Häkchen-Icon -->
+        <div class="confirm-icon" aria-hidden="true">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 13l4 4L19 7" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+
+        <h2>Deine Nachricht wurde gesendet!</h2>
+        <p>Wir melden uns so schnell wie möglich bei dir.</p>
+
+        <a class="btn-back" href="./index.html">Zurück zur Startseite</a>
+      </div>
+    </main>
+
+    <footer
+      class="site-footer"
+      data-include="./components/footer.html"
+    ></footer>
+  </body>
+</html>

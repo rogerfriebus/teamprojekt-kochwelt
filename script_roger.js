@@ -169,7 +169,58 @@ function initBurgerMenu() {
 }
 
 /* ============================
-   4) Boot / Startlogik
+   4) Kontaktformular (Formspree)
+   ============================ */
+
+/**
+ * Initialisiert das Kontaktformular:
+ * - Fängt den Submit ab (preventDefault)
+ * - Sendet die Daten per fetch an Formspree
+ * - Bei Erfolg: Weiterleitung auf SendMail.html
+ * - Bei Fehler: Alert mit Fehlermeldung
+ *
+ * Voraussetzung: Das Formular muss id="contact-form" haben.
+ */
+function initContactForm() {
+  const form = document.getElementById("contact-form");
+
+  // Falls kein Formular auf der Seite → nichts tun
+  if (!form) return;
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(form);
+
+    try {
+      // ⚠️ TODO: Ersetze "DEINE_ID" durch deine echte Formspree-Form-ID
+      const res = await fetch("https://formspree.io/f/DEINE_ID", {
+        method: "POST",
+        body: formData,
+        headers: { Accept: "application/json" },
+      });
+
+      if (res.ok) {
+        // Erfolg → Bestätigungsseite anzeigen
+        window.location.href = "./SendMail.html";
+      } else {
+        const data = await res.json();
+        const errorMsg =
+          data.errors?.map((e) => e.message).join(", ") ||
+          "Unbekannter Fehler";
+        alert("Fehler beim Senden: " + errorMsg);
+      }
+    } catch (err) {
+      alert(
+        "Netzwerkfehler – bitte prüfe deine Internetverbindung und versuche es erneut."
+      );
+      console.error("Formular-Submit fehlgeschlagen:", err);
+    }
+  });
+}
+
+/* ============================
+   5) Boot / Startlogik
    ============================ */
 
 /**
@@ -182,6 +233,7 @@ async function boot() {
   await includeFragments();
   setActiveNav();
   initBurgerMenu();
+  initContactForm();
 }
 
 // Sofort starten, sobald dieses Script geladen ist
