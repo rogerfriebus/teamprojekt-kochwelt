@@ -224,6 +224,10 @@ span{
     .input-portions{
         padding-inline: 32px;
     }
+    .preparation-details{
+    width: 100%;
+    padding-inline: 32px;
+    }
 }
 
 
