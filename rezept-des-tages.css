@@ -247,11 +247,12 @@ span{
 }
 @media (max-width: 474px){
     h1{
-        font-size: 24px;
         margin-top: 0;
         margin-bottom: 32px;
+        text-align: center;
     }
     .recipe-info{
+        width: 100%;
         display: flex;
         flex-direction: column;
         gap: 16px;
