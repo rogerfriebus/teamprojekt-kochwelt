@@ -73,15 +73,13 @@ body {
   flex-direction: column;
 }
 
-main {  
+main{  
   flex: 1 0 auto;
    /* schiebt Footer nach unten */
 }
 
 .seperator {
-  max-width: var(--container);
-  margin: 0 auto;
-  padding: 0 var(--pad);
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -89,6 +87,7 @@ main {
 }
 
 .recipe-otd {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -107,18 +106,12 @@ main {
 .button{
   width: 250px;
   text-align: center;
-
   text-decoration: none;
   color: white;
   padding: 16px 54px;
   background-color: #008000;
   cursor: pointer;
-    p{
-        color: white;
-        font-weight: 500;
-        margin: 0;
-    }
-    margin-top: px;
+  font-weight: 600;
 }
 .button:hover{
     background-color: #009f00;
@@ -129,14 +122,14 @@ main {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     gap: 16px;
     padding-bottom: 72px;
+    padding-top: 36px;
 }
 
 .recipes-links{
-  
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;    
@@ -149,6 +142,30 @@ main {
     border-radius: 8px;
     object-fit: cover;
   }
+
+.wok{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 120px;
+    padding-top: 36px;
+}
+
+.lorem{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    
+}
+
+.lorem img{
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+    object-fit: cover;}
 
 img {
   display: block;
@@ -434,4 +451,10 @@ h1 {
   color: var(--green);
   text-decoration: underline;
   text-underline-offset: 2px;
+}
+
+.max-width{
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 var(--pad);
 }
