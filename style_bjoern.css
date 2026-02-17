@@ -217,10 +217,7 @@ span{
         width: 100%;
         padding-inline: 32px;
     }
-    .ingredients{
-        width: 100%;
-        padding-inline: 32px;
-    }
+
     .input-portions{
         padding-inline: 32px;
     }
@@ -240,6 +237,7 @@ span{
         flex-direction: column;
         align-items: start;
         gap: 8px;
+        padding-inline: 0;
     }
     .portion-size{
         width: 100%;
@@ -261,7 +259,10 @@ span{
         flex-direction: column;
         gap: 16px;
     }
-
+    .profil-order{
+        flex-direction: column;
+        gap: 32px;
+    }
 }
 
 
