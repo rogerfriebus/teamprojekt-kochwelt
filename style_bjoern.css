@@ -7,11 +7,11 @@
 body{
     margin:0;
 }
-/*header{
+header{
     width: 100%;
     height: 112px;
     background-color: rgb(42, 165, 159);
-}*/
+}
 
 /* Titelbild und Angaben */
 main{
@@ -95,7 +95,6 @@ main{
 }
 .ingredients{
     width: 100%;
-    max-width: 1176px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -210,11 +209,26 @@ span{
     width: 16px;
 }
 .max-width{
-    max-width: 1440px;
+    max-width: 1240px;
 }
 
 @media (max-width: 1440px){
     .title-card-position{
+    width: 100%;
+    padding-inline: 32px;
+    }
+    .ingredients{
+    width: 100%;
+    padding-inline: 32px;
+    }
+    .input-portions{
+        padding-inline: 32px;
+    }
+    .preparation-details{
+    width: 100%;
+    padding-inline: 32px;
+    }
+    .profil-details{
     width: 100%;
     padding-inline: 32px;
     }
