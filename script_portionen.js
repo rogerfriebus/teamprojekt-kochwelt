@@ -40,6 +40,7 @@ function initPortionenRechner() {
       return wert.toString();
     }
     return wert.toFixed(1);
+    }
   }
 
   /**
@@ -53,7 +54,6 @@ function initPortionenRechner() {
     if (isNaN(rohwert) || rohwert < 1) {
       rohwert = 1;
       input.value = 1;
-    }
 
     // Maximum aus dem HTML-Attribut lesen (falls gesetzt)
     var maxWert = parseFloat(input.max) || 99;
