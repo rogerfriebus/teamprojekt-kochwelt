@@ -6,7 +6,6 @@
 .content-wrapper{
     max-width: 1240px;
     margin: 0 auto;
-    padding: 0 24px;
     display: flex;
 }
 
@@ -113,6 +112,13 @@ main{
     object-fit: cover;
   }
 
+@media (max-width: 1440px){
+    .content-wrapper{
+        width: 100%;
+        padding-inline: 24px;
+    }
+}
+
 @media (max-width: 767px) {
     .content-wrapper{
         flex-direction: column;
@@ -143,4 +149,5 @@ main{
     .lorem img{
         width: 100%;
         height: auto;
-}
+    }
+  }
