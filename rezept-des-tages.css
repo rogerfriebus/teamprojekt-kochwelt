@@ -138,6 +138,12 @@ main{
     display: flex;
     gap: 16px;
 }
+.preperation-steps{
+    margin: 0;
+    ol{
+        padding-inline-start: 16px;
+    }
+}
 .highlights{
     color: #000000;
     font-weight: 700;
