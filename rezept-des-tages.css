@@ -137,6 +137,10 @@ main{
     display: flex;
     gap: 16px;
 }
+.highlights{
+    color: #000000;
+    font-weight: 700;
+}
 
 
 /* Person */
