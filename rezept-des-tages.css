@@ -238,7 +238,7 @@ span{
        padding-inline: 32px;
     }
 }
-@media (max-width: 500px){
+@media (max-width: 505px){
     .input-portions{
         display: flex;
         flex-direction: column;
@@ -252,9 +252,7 @@ span{
     .border-radius{
         width: 50%;
     }
-}
-@media (max-width: 474px){
-    h1{
+        h1{
         font-size: 32px;
         margin-top: 0;
         margin-bottom: 32px;
@@ -294,7 +292,7 @@ span{
         display: flex;
         justify-content: center;
         align-items: center;
-    }   
+    } 
 }
 
 
