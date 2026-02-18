@@ -73,7 +73,8 @@ main{
     gap: 16px;
 }
 .border-radius{
-    width: 50%;
+    font-size: 16px;
+    width: 140px;
     border-color: #EFEFEF;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
@@ -237,7 +238,7 @@ span{
        padding-inline: 32px;
     }
 }
-@media (max-width: 610px){
+@media (max-width: 500px){
     .input-portions{
         display: flex;
         flex-direction: column;
@@ -247,6 +248,9 @@ span{
     }
     .portion-size{
         width: 100%;
+    }
+    .border-radius{
+        width: 50%;
     }
 }
 @media (max-width: 474px){
