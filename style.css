@@ -3,6 +3,13 @@
     src: url(./fonts/Raleway-VariableFont_wght.ttf);
 }
 
+.content-wrapper{
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+}
+
 main{  
   display: flex;
   flex-direction: column;
@@ -10,20 +17,17 @@ main{
 }
 
 
-.recipe-otd {
+.recipe-of-the-day {
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 40px;
   margin-top: 64px;
   margin-bottom: 64px;
 }
 
-.recipe-otd img{
+.recipe-of-the-day img{
     width: 400px;
     height: auto;
     border-radius: 8px;
+    margin-right: 40px;
 }
 
 
@@ -44,14 +48,17 @@ main{
 
 .recipes {
     background-color: rgb(240, 240, 240);
-    background-size: cover;
+    width: 100%;
+    padding-top: 32px;
+    padding-bottom: 64px;
+}
+
+.recipes-content{
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 16px;
-    padding-bottom: 72px;
-    padding-top: 36px;
 }
 
 .recipes-links{
@@ -71,14 +78,21 @@ main{
     object-fit: cover;
   }
 
-.wok{
+.wok-vs-pan{
+    width: 100%;
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 120px;
+    padding-top: 36px;
+}
+
+.wok-vs-pan-content{
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 16px;
-    padding-bottom: 120px;
-    padding-top: 36px;
 }
 
 .lorem{
@@ -99,7 +113,34 @@ main{
     object-fit: cover;
   }
 
-  .padding-left-right{
-    padding-left:  100px;
-    padding-right: 100px;
-  }
+@media (max-width: 767px) {
+    .content-wrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+    .recipe-of-the-day img{
+        width: 100%;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 16px;
+    }
+    .recipes-links{
+        flex-direction: column;
+        gap: 32px;
+        font-size: 24px;
+    }
+      .recipes-links img{
+          width: 100%;
+          height: auto;
+      }
+    .wok-vs-pan{
+        padding-bottom: 64px;
+    }
+    .lorem{
+        flex-direction: column;
+        align-items: center;
+    }
+    .lorem img{
+        width: 100%;
+        height: auto;
+}
