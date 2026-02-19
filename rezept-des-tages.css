@@ -3,10 +3,10 @@
     src: url(./fonts/Raleway-VariableFont_wght.ttf);
 }
 
-
 body{
     margin:0;
 }
+
 header{
     width: 100%;
     height: 112px;
@@ -23,28 +23,31 @@ main{
         margin: 32px 0;
     }
 }
+
 .recipe-title-card{
     display: flex;
     justify-content: center;
 }
+
 .title-card-position{
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: start;
 }
+
 .recipe-title-img{
     width: 100%;
     height: 248px;
     object-fit: cover;
     border-radius: 16px;
 }
+
 .recipe-info{
     display: flex;
     justify-content: start;
     gap: 16px;
 }
-
 
 /* Portionsangabe und Zutatenliste */
 .recipe-details{
@@ -54,24 +57,28 @@ main{
     justify-content: center;
     align-items: center;
 }
+
 .separator{
     width: 100%;
     max-width: 1240px;
     height: 2px;
     background-color: #EFEFEF;
 }
+
 .recipe-list{
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: start;
 }
+
 .input-portions{
     display: flex;
     justify-content: start;
     align-items: center;
     gap: 16px;
 }
+
 .border-radius{
     font-size: 16px;
     width: 140px;
@@ -79,9 +86,11 @@ main{
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
 }
+
 .portion-size{
     display: flex;
 }
+
 .button{
     padding: 16px 54px;
     background-color: #008000;
@@ -92,9 +101,11 @@ main{
         margin: 0;
     }
 }
+
 .button:hover{
     background-color: #009f00;
 }
+
 .ingredients{
     width: 100%;
     display: flex;
@@ -102,6 +113,7 @@ main{
     justify-content: space-between;
     align-items: start;
 }
+
 .container-box-gray{
     width: 100%;
     background-color: #EFEFEF;
@@ -111,6 +123,7 @@ main{
         margin: 0;
     }
 }
+
 .container-box-white{
     background-color: #ffffff;
     border-radius: 8px;
@@ -120,7 +133,6 @@ main{
     }
 }
 
-
 /* Zubereitung */
 .recipe-preparation{
     width: 100%;
@@ -128,27 +140,30 @@ main{
     flex-direction: column;
     align-items: center;
 }
+
 .preparation-details{
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: start;
 }
+
 .preperation-info{
     display: flex;
     gap: 16px;
 }
+
 .preperation-steps{
     margin: 0;
     ol{
         padding-inline-start: 16px;
     }
 }
+
 .highlights{
     color: #000000;
     font-weight: 700;
 }
-
 
 /* Person */
 .profil{
@@ -157,6 +172,7 @@ main{
     justify-content: center;
     align-items: center;
 }
+
 .profil-details{
     width: 100%;
     display: flex;
@@ -164,10 +180,12 @@ main{
     align-items: start;
     gap: 32px;
 }
+
 .profil-img-size{
     width: 124px;
     border-radius: 100px;
 }
+
 .profil-order{
     display: flex;
     align-items: center;
@@ -177,7 +195,6 @@ main{
     }
 }
 
-
 /* Allgemein */
 h1{
     font-family: 'Raleway';
@@ -186,26 +203,31 @@ h1{
     margin-top: 0;
     margin-bottom: 32px;
 }
+
 h2{
     font-family: 'Raleway';
     font-size: 32px;
     font-weight: bold;
     margin: 0;
 }
+
 h3{
     font-family: 'Raleway';
     font-size: 24px;
     font-weight: bold;
     margin: 0;
 }
+
 p{
     font-family: 'Raleway';
     font-size: 16px;
 }
+
 span{
     font-family: 'Raleway';
     font-size: 16px;
 }
+
 .info-box{
     display: flex;
     align-items: center;
@@ -217,9 +239,11 @@ span{
         margin: 0;
     }
 }
+
 .info-icon{
     width: 16px;
 }
+
 .max-width{
     max-width: 1240px;
 }
@@ -229,21 +253,26 @@ span{
         width: 100%;
         padding-inline: 32px;
     }
+
     .ingredients{
         padding-inline: 32px;
     }
+
     .input-portions{
         padding-inline: 32px;
     }
+
     .preparation-details{
         width: 100%;
         padding-inline: 32px;
     }
+
     .profil-details{
        width: 100%;
        padding-inline: 32px;
     }
 }
+
 @media (max-width: 505px){
     .input-portions{
         display: flex;
@@ -252,9 +281,11 @@ span{
         gap: 8px;
         padding-inline: 32px;
     }
+
     .portion-size{
         width: 100%;
     }
+
     .border-radius{
         font-size: 24px;
         width: 50%;
@@ -265,12 +296,14 @@ span{
         margin-bottom: 32px;
         text-align: center;
     }
+
     .recipe-info{
         width: 100%;
         display: flex;
         flex-direction: column;
         gap: 16px;
     }
+
     .preparation-details{
         display: flex;
         justify-content: center;
@@ -279,29 +312,32 @@ span{
             text-align: center;
         }
     }
+
     .preperation-info{
         width: 100%;
         display: flex;
         flex-direction: column;
         gap: 16px;
     }
+
     .profil-order{
         flex-direction: column;
         gap: 32px;
     }
+
     .button{
         width: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
     }
+
     .profil-details{
         display: flex;
         justify-content: center;
         align-items: center;
     } 
 }
-
 
 footer{
     width: 100%;
